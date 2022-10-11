@@ -1,0 +1,27 @@
+{
+  "name": "MP3000",
+  "version": "1.0.1",
+  "description": "Test",
+  "permissions": ["activeTab", "downloads"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mp3000@mp3000.fr"
+    }
+  },
+  "background": {
+    "scripts": ["mp3000-bg.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["mp3000-content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
+}

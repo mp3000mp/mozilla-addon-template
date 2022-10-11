@@ -1,0 +1,9 @@
+todo.txt
+
+.env
+
+/node_modules
+
+/web-ext-artifacts
+
+.web-extension-id
