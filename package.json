@@ -6,7 +6,7 @@
   "scripts": {
     "build": "web-ext --config=config.js build",
     "lint": "web-ext lint",
-    "serve": "web-ext run",
+    "serve": "export $(cat .env | xargs) && web-ext run --config=config.js --firefox=$mz_ff_ext_firefox_path",
     "sign": "export $(cat .env | xargs) && web-ext sign --config=config.js --api-key=$mz_ff_ext_api_key --api-secret=$mz_ff_ext_api_secret",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

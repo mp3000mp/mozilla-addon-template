@@ -4,7 +4,7 @@ module.exports = {
         overwriteDest: true,
     },
     run: {
-        firefox: 'nightly',
+        firefox: 'latest',
     },
     ignoreFiles: [
         'package-lock.json',
