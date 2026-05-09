@@ -4,6 +4,8 @@ todo.txt
 
 /node_modules
 
+/dist
+
 /web-ext-artifacts
 
 .web-extension-id
