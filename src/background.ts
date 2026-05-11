@@ -1,14 +1,12 @@
-function logOptionA(value: unknown) {
-    console.log(`[bg] Option A = ${String(value ?? '')}`)
+import { getOption, onOptionChanged } from './utils'
+
+function logOptionA(value: string) {
+  console.log(`[MP3000 bg] Option A = ${value}`)
 }
 
 browser.runtime.onInstalled.addListener(() => {
-    console.log('Extension MP3000 loaded (bg)')
-    browser.storage.sync.get('optionA').then((res) => logOptionA(res.optionA))
+  console.log('Extension MP3000 loaded (bg)')
+  getOption('optionA').then(logOptionA)
 })
 
-browser.storage.onChanged.addListener((changes) => {
-    if (changes.optionA) {
-        logOptionA(changes.optionA.newValue)
-    }
-})
+onOptionChanged('optionA', logOptionA)

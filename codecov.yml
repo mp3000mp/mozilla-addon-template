@@ -1,0 +1,22 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
+        threshold: 1%
+
+comment:
+  layout: 'reach, diff, flags, files'
+  behavior: default
+  require_changes: false
+
+ignore:
+  - 'dist'
+  - 'node_modules'
+  - '**/*.test.ts'
+  - 'src/manifest.json'
+  - 'src/public'

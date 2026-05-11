@@ -6,6 +6,8 @@ todo.txt
 
 /dist
 
+/coverage
+
 /web-ext-artifacts
 
 .web-extension-id

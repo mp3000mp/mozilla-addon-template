@@ -2,15 +2,15 @@ import { defineConfig } from 'vite'
 import webExtension from 'vite-plugin-web-extension'
 
 export default defineConfig({
-    root: 'src',
-    build: {
-        outDir: '../dist',
-        emptyOutDir: true,
-    },
-    plugins: [
-        webExtension({
-            manifest: 'manifest.json',
-            browser: 'firefox',
-        }),
-    ],
+  root: 'src',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+  },
+  plugins: [
+    webExtension({
+      manifest: 'manifest.json',
+      browser: 'firefox',
+    }),
+  ],
 })

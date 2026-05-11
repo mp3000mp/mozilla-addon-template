@@ -1,11 +1,10 @@
+import { getOption, onOptionChanged } from './utils'
+
 console.log('Extension MP3000 loaded (content)')
 
-browser.storage.sync.get('optionA').then((res) => {
-    console.log(`[content] Option A = ${String(res.optionA ?? '')}`)
-})
+function logOptionA(value: string) {
+  console.log(`[MP3000 content] Option A = ${value}`)
+}
 
-browser.storage.onChanged.addListener((changes) => {
-    if (changes.optionA) {
-        console.log(`[content] Option A = ${String(changes.optionA.newValue ?? '')}`)
-    }
-})
+getOption('optionA').then(logOptionA)
+onOptionChanged('optionA', logOptionA)

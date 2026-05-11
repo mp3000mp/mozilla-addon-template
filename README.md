@@ -14,16 +14,19 @@ npm install --global web-ext
 
 # Dev
 
-    npm run dev
+Run both in parallel (two terminals):
+
+    npm run dev    # rebuilds dist/ on source changes
+    npm run start  # launches Firefox with the extension, reloads on dist/ changes
 
 # Build
 
-    npm run typecheck
-    npm run build
+    npm run format
     npm run lint
-
-_Note: to test the build, open firefox and go to about:debugging#/runtime/this-firefox.
-Then load the unpacked extension from `dist/`._
+    npm run lint:ext
+    npm run typecheck
+    npm run test
+    npm run build
 
 # Build/Deploy
 
