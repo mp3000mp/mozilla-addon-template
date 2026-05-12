@@ -1,5 +1,5 @@
 {
-  "name": "mp3000-mozeilla-addon-template",
+  "name": "mp3000-mozilla-addon-template",
   "version": "1.0.1",
   "description": "MP3000 ext",
   "type": "module",
